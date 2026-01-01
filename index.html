@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pattern Sense Generator</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            'ps-bg': 'var(--ps-bg)',
+            'ps-panel': 'var(--ps-panel)',
+            'ps-border': 'var(--ps-border)',
+            'ps-text': 'var(--ps-text)',
+            'ps-muted': 'var(--ps-muted)',
+            'ps-accent': 'var(--ps-accent)',
+            'ps-error': 'var(--ps-error)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --ps-bg: #0f1115;
+      --ps-panel: #16191f;
+      --ps-border: #272b36;
+      --ps-text: #e1e3e6;
+      --ps-muted: #8a919e;
+      --ps-accent: #5b8c99;
+      --ps-error: #cf5b5b;
+    }
+
+    body {
+      background-color: var(--ps-bg);
+      color: var(--ps-text);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--ps-panel);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--ps-border);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--ps-muted);
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
